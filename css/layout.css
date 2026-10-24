@@ -1,0 +1,54 @@
+/* Shared layout for the portfolio pages.
+
+   Mirrors the Grovyn project page: a centered content column capped at
+   1200px with at least 150px of breathing room on each side, a breadcrumb
+   and page title pinned to the same top-left origin, and the same title
+   size across every page. */
+
+.wrap {
+  width: calc(100% - 300px);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-hero {
+  padding-top: 150px;
+}
+
+.page-hero .breadcrumb {
+  margin: 0 0 30px;
+}
+
+.page-title {
+  margin: 20px 0 50px;
+  font-family: "Chivo", sans-serif;
+  font-weight: 400;
+  font-size: 7vw;
+  color: #fff;
+}
+
+.page-blurb {
+  max-width: 640px;
+  margin: 0 0 50px;
+  font-family: "Chivo", sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  font-weight: 200;
+  line-height: 1.7;
+  color: rgba(182, 236, 255, 0.65);
+}
+
+@media (max-width: 1100px) {
+  .wrap {
+    width: calc(100% - 100px);
+  }
+}
+
+@media (max-width: 760px) {
+  .wrap {
+    width: calc(100% - 60px);
+  }
+  .page-hero {
+    padding-top: 120px;
+  }
+}

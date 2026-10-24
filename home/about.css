@@ -1,0 +1,256 @@
+chivohtml {
+  overscroll-behavior: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: rgb(0, 0, 0);
+  overscroll-behavior-y: none;
+}
+
+.navigation {
+  top: 0;
+  z-index: 4;
+  display: flex;
+  position:fixed;
+  width: calc(100% - 100px);
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  opacity: 75%;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  transition: .5s;
+}
+.logo:hover {
+  opacity: 1;
+}
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+.nav-item {
+  width: fit-content;
+  display: inline-block;
+  text-decoration: none;
+  color:rgba(69, 205, 255, 0.4);
+  font-family: JetBrains mono;
+  font-weight: 300;
+  transition: .5s;
+  text-align: center;
+}
+.nav-item:hover {
+  opacity: 1;
+  color:rgb(182, 236, 255);
+}
+.nav-item:last-child {
+  color:rgb(182, 236, 255);
+}
+.logotype {
+  font-family: chivo;
+  color:rgba(69, 205, 255, 0.4);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: .5s;
+}
+.logotype:hover {
+  opacity: 1;
+  color:rgb(182, 236, 255);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 0;
+  width: 100%;
+  margin: 0 0 50px;
+}
+.left {
+  min-width: 0;
+  padding: 50px;
+  background-color: rgb(13, 20, 23);
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.right {
+  min-width: 0;
+  display: grid;
+  grid-auto-rows: auto;
+}
+.box {
+  box-sizing: border-box;
+  padding: 50px;
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgb(13, 20, 23);
+  border-radius: 20px;
+}
+.box2 {
+  box-sizing: border-box;
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgb(13, 20, 23);
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+.box3{
+  flex: 1;
+  padding: 50px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.me {
+  max-width: 175%;
+  object-fit: contain;
+  align-self: end;
+  justify-self: center;
+  margin-bottom: 10px;
+}
+.title {
+  margin: 0;
+  color: rgba(255, 255, 255);
+  font-family: JetBrains mono;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 200;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.body {
+  margin: 10px 0 0 0;
+  line-height: 30px;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: chivo;
+  color: rgb(182, 236, 255, .8);
+}
+.umm {
+  margin: 10px 0 0 0;
+  line-height: 30px;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: chivo;
+  color: rgb(182, 236, 255, .8);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.accent {
+  font-style: italic;
+  font-weight: 200;
+  color: rgb(182, 236, 255,.8);
+}
+.time {
+  margin: 0;
+  line-height: 30px;
+  font-size: .75rem;
+  font-weight: 200;
+  font-family: JetBrains mono;
+  text-transform: uppercase;
+  color: rgb(182, 236, 255, .8);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.apps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+.app {
+  height: auto;
+  width: auto;
+  max-height: 40px;
+  flex-shrink: 0;
+  filter: grayscale(1);
+  transition: .5s;
+}
+.app:hover {
+  filter: none;
+}
+.button {
+  display: inline-block;
+  color: rgb(182, 236, 255, .8);
+  font-family: "Chivo", sans-serif;
+  text-decoration: none;
+  font-size: .75rem;
+  font-weight: 200;
+  width: fit-content;
+  text-align: center;
+  border: 1px solid rgb(182, 236, 255, .8);
+  border-radius: 20px;
+  margin: 20px 10px 0px 0px;
+  padding: 5px 10px;
+  transition: color .3s, border-color .3s, background-color .3s;
+}
+.button:hover {
+  color: black;
+  background-color: rgb(182, 236, 255);
+  border-color: rgb(182, 236, 255);
+}
+
+.footer {
+  height: 50px;
+  margin: 0px 50px 0px 50px;
+  padding-top: 20px;
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.credits, .gmail {
+  font-family: chivo;
+  color:rgba(69, 205, 255, 0.4);
+  font-weight: 300;
+  margin-top: 0;
+  display: inline-block;
+  text-decoration: none;
+  transition: .5s;
+}
+.gmail:hover {
+  color: rgb(182, 236, 255);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .left, .box, .box3 {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 760px) {
+  .navigation {
+    width: calc(100% - 40px);
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .nav-right {
+    gap: 16px;
+  }
+  .box2 {
+    grid-template-columns: 1fr;
+  }
+  .me {
+    max-width: 60%;
+  }
+}

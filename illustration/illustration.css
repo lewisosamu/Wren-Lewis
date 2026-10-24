@@ -1,0 +1,250 @@
+html {
+  overscroll-behavior: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.navigation {
+  top: 0;
+  z-index: 4;
+  display: flex;
+  position:fixed;
+  background: linear-gradient(to bottom,
+    rgba(0, 0, 0) 10%,
+    rgba(0, 0, 0, 0.75) 95%,
+    transparent);
+  width: calc(100% - 100px);
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 50px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  opacity: 75%;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  transition: .5s;
+}
+.logo:hover {
+  opacity: 1;
+}
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+.nav-item {
+  width: fit-content;
+  display: inline-block;
+  text-decoration: none;
+  color:rgba(69, 205, 255, 0.4);
+  font-family: JetBrains mono;
+  font-weight: 300;
+  transition: .5s;
+  text-align: center;
+}
+.nav-item:hover {
+  opacity: 1;
+  color:rgb(182, 236, 255);
+}
+.logotype {
+  font-family: "chivo";
+  color:rgba(69, 205, 255, 0.4);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: .5s;
+}
+.logotype:hover {
+  opacity: 1;
+  color:rgb(182, 236, 255);
+}
+
+.description {
+  font-family: chivo;
+  color:rgb(182, 236, 255);
+  font-size: 1rem;
+  font-weight: 200;
+  width: fit-content;
+}
+.date {
+  font-family: JetBrains mono;
+  color:rgb(182, 236, 255);
+  font-weight:200;
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+.flowers {
+  margin: 0;
+  display: flex;
+  gap: 25px;
+}
+.flower {
+  flex: 1;
+  width: 75%;
+}
+.hako,.hako2,.hako3 {
+  border-radius: 10px;
+  object-fit: cover;
+  display: inline;
+  width: 100%;
+}
+.hako2 {
+  margin-top: 75px;
+}
+.hako3 {
+  margin-top: 150px;
+}
+
+.seascape {
+  margin: 200px 0 0 0;
+}
+.sea{
+  width: calc(50% - 25px);
+  border-radius: 10px
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-left: 0;
+}
+.right {
+  display: flex;
+  justify-content: center;
+}
+.column {
+  width: 50%;
+}
+.tori {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-top: -150px;
+}
+.left {
+  display: flex;
+  justify-content: center;
+  grid-column: 1;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  width: 100%;
+  margin: 0;
+}
+.column2 {
+  width: 100%;
+}
+
+.butterfly {
+  margin-top: 150px;
+  width: 100%;
+}
+
+.grid4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-top: 150px;
+}
+.grid5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  margin-top: -75px;
+}
+
+.turtle {
+  width: 75%;
+  margin: 50px 0 50px 0;
+}
+
+.footer {
+  height: 50px;
+  margin: 0px 50px 0px 50px;
+  padding-top: 20px;
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.credits, .gmail {
+  font-family: chivo;
+  color:rgba(69, 205, 255, 0.4);
+  font-weight: 300;
+  margin-top: 0;
+  display: inline-block;
+  text-decoration: none;
+  transition: .5s;
+}
+.gmail:hover {
+  color: rgb(182, 236, 255);
+}
+
+@media (max-width: 760px) {
+  .navigation {
+    width: calc(100% - 40px);
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .nav-right {
+    gap: 16px;
+  }
+  .flowers {
+    flex-direction: column;
+  }
+  .hako2,
+  .hako3 {
+    margin-top: 0;
+  }
+  .seascape {
+    margin-top: 100px;
+  }
+  .sea {
+    width: 100%;
+  }
+  .grid,
+  .grid2,
+  .grid3,
+  .grid4,
+  .grid5 {
+    grid-template-columns: 1fr;
+    width: 100%;
+    margin-left: 0;
+  }
+  .grid2,
+  .grid5 {
+    margin-top: 50px;
+  }
+  .right,
+  .left {
+    grid-column: 1;
+  }
+  .column {
+    width: 100%;
+  }
+  .turtle {
+    width: 100%;
+  }
+}

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safeway App Redesign — Ren Lewis</title>
+    <meta name="description" content="Safeway App Redesign — a two-week UX/UI case study focused on a clearer, faster grocery list experience by Ren Lewis.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Safeway App Redesign — Ren Lewis">
+    <meta property="og:description" content="A two-week UX/UI case study focused on a clearer, faster grocery list experience by Ren Lewis.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/breadcrumbs.css">
+    <link rel="stylesheet" href="safeway.css">
+  </head>
+  <body>
+    <div class="navigation">
+      <div class="nav-left">
+        <a href="../home/home.html">
+          <img class="logo" src="../home/images-home/logo2.png" alt="Ren Lewis logo">
+        </a>
+        <a class="logotype" href="../home/home.html">Ren Lewis</a>
+      </div>
+      <div class="nav-right">
+        <a href="../home/home.html" class="nav-item">HOME</a>
+        <a href="../design/design.html" class="nav-item">ARCHIVE</a>
+        <a href="../home/about.html" class="nav-item">ABOUT</a>
+      </div>
+    </div>
+
+    <main>
+      <header class="hero wrap">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="../design/design.html">Archive</a></li>
+            <li><span aria-current="page">Safeway App Redesign</span></li>
+          </ol>
+        </nav>
+        <div class="hero-layout">
+          <h1 class="hero-title">Safeway App Redesign</h1>
+
+          <div class="hero-visual">
+            <div class="phone">
+              <video class="phone-video" src="images-safeway/vid.mp4" width="660" height="1360" preload="metadata" autoplay muted loop playsinline disablepictureinpicture aria-label="Safeway app walkthrough — My Lists and list editing"></video>
+            </div>
+          </div>
+
+          <div class="hero-overview">
+            <div class="meta">
+              <div class="meta-item">
+                <p class="meta-label">Role</p>
+                <p class="meta-value">Product Designer</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-label">Timeline</p>
+                <p class="meta-value">2 weeks</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-label">Focus</p>
+                <p class="meta-value">Mobile UX / UI</p>
+              </div>
+              <div class="meta-item">
+                <p class="meta-label">Skills</p>
+                <p class="meta-value">Prototyping / Testing</p>
+              </div>
+            </div>
+
+            <h2 class="hero-list-title">Brief</h2>
+            <ul class="hero-list">
+              <li>Redesign a portion of an existing app</li>
+              <li>Identify and address real usability issues</li>
+              <li>Explore two solutions &amp; test them with users</li>
+              <li>Progress through a clear, iterative UX process</li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <section class="section wrap" id="persona">
+        <div class="section-head">
+          <p class="eyebrow">01 <span class="sep">/</span> Insights</p>
+          <h2 class="section-title">Persona</h2>
+          <p class="section-sub">I interviewed a grocery shopper who might benefit from a redesigned app.</p>
+        </div>
+
+        <div class="persona">
+          <div class="persona-card">
+            <p class="persona-name">Naomi, 29</p>
+            <p class="persona-role">Software engineer / weekly grocery shopper</p>
+            <blockquote class="persona-quote">“I write down my list on the bus. When I'm in the store, I just want to find my items asap.”</blockquote>
+          </div>
+
+          <div class="persona-details">
+            <div class="persona-row">
+              <div class="persona-detail">
+                <h3 class="persona-label">Goals</h3>
+                <ul class="persona-list">
+                  <li>Have a simple place for weekly grocery lists</li>
+                  <li>Find items quickly</li>
+                </ul>
+              </div>
+              <div class="persona-detail">
+                <h3 class="persona-label">Frustrations</h3>
+                <ul class="persona-list">
+                  <li>Cluttered screens</li>
+                  <li>Complicated UX</li>
+                </ul>
+              </div>
+            </div>
+            <div class="persona-row">
+              <div class="persona-detail">
+                <h3 class="persona-label">Behaviours</h3>
+                <ul class="persona-list">
+                  <li>Shops with a basket in one hand</li>
+                  <li>Uses notes app instead of Safeway app</li>
+                </ul>
+              </div>
+              <div class="persona-detail">
+                <h3 class="persona-label">Needs</h3>
+                <ul class="persona-list">
+                  <li>Simplicity</li>
+                  <li>Buttons within thumb reach</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="pain-points">
+        <div class="section-head">
+          <p class="eyebrow">02 <span class="sep">/</span> Context</p>
+          <h2 class="section-title">Pain Points</h2>
+          <p class="section-sub">I identified the main issues of the current safeway app.</p>
+        </div>
+
+        <figure class="case-figure fig-problems">
+          <div class="media-slot">
+            <img src="images-safeway/problems.jpg" alt="Current Safeway app taskflow, from My Lists through search to the updated list" width="7699" height="3840" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="pain-grid">
+          <article class="pain-card">
+            <p class="pain-num">01</p>
+            <h3 class="pain-title">Clarity</h3>
+            <p class="pain-text">Looks the same as previous page</p>
+          </article>
+          <article class="pain-card">
+            <p class="pain-num">02</p>
+            <h3 class="pain-title">Efficiency</h3>
+            <p class="pain-text">Out of thumb reach for right-handed users</p>
+          </article>
+          <article class="pain-card">
+            <p class="pain-num">03</p>
+            <h3 class="pain-title">Errors</h3>
+            <p class="pain-text">Clickbox for number of items is too small compared to its neighbor</p>
+          </article>
+          <article class="pain-card">
+            <p class="pain-num">04</p>
+            <h3 class="pain-title">Clarity</h3>
+            <p class="pain-text">It is unclear that the check-boxes are meant to “cross off” items</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap" id="solutions">
+        <div class="section-head">
+          <p class="eyebrow">03 <span class="sep">/</span> Problems and Solution</p>
+          <h2 class="section-title">Two directions</h2>
+          <p class="section-sub">I selected the most severe problem to focus my work around.</p>
+        </div>
+
+        <article class="solution-card solution-card--problem">
+          <div class="solution-head">
+            <p class="solution-num">Selected Problem</p>
+            <h3 class="solution-title">Efficiency and Clarity</h3>
+          </div>
+          <p class="solution-text">Overall, the system is visually cluttered and has too many available actions. The buttons placement and size are not optimized for mobile use.</p>
+        </article>
+
+        <div class="solution-grid">
+          <article class="solution-card">
+            <div class="solution-head">
+              <h3 class="solution-title">Solution 1</h3>
+            </div>
+            <ul class="solution-list">
+              <li>Simplifies the UI and UX by removing unnecessary actions</li>
+              <li>Maintains the original structure</li>
+              <li>Checkboxes function to select any amount of items to delete or send to cart</li>
+              <li>Scraps the “cross off” function</li>
+            </ul>
+          </article>
+
+          <article class="solution-card">
+            <div class="solution-head">
+              <h3 class="solution-title">Solution 2</h3>
+            </div>
+            <ul class="solution-list">
+              <li>Restructures the system</li>
+              <li>Maintains the original actions</li>
+              <li>More mobile-based interactions within each page (swipe, type, tap, etc)</li>
+              <li>Reintroduces the “cross off” function</li>
+              <li>Decreases visual clutter and navigation between pages</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="section wrap" id="exploration">
+        <div class="section-head">
+          <p class="eyebrow">04 <span class="sep">/</span> Exploration</p>
+          <h2 class="section-title">Sketching the flow</h2>
+          <p class="section-sub">I began by sketching both solutions by hand.</p>
+        </div>
+
+        <figure class="case-figure fig-sketches">
+          <div class="media-slot">
+            <img src="images-safeway/sketches.jpg" alt="Hand-drawn sketches for Solution 1 and Solution 2" width="7699" height="4783" loading="lazy" decoding="async">
+          </div>
+        </figure>
+      </section>
+
+      <section class="section wrap" id="sitemaps">
+        <div class="section-head">
+          <p class="eyebrow">05 <span class="sep">/</span> Abstract Flow</p>
+          <h2 class="section-title">Sitemaps</h2>
+          <p class="section-sub">I mapped every screen and state for both solutions so the big picture was visible.</p>
+        </div>
+
+        <figure class="case-figure fig-sitemaps">
+          <div class="media-slot">
+            <img src="images-safeway/sitemaps.jpg" alt="Sitemaps comparing the page structure of Solution 1 and Solution 2" width="7699" height="6863" loading="lazy" decoding="async">
+          </div>
+        </figure>
+      </section>
+
+      <section class="section wrap" id="wireframes">
+        <div class="section-head">
+          <p class="eyebrow">06 <span class="sep">/</span> Wireframes</p>
+          <h2 class="section-title">Lo to high-fi</h2>
+          <p class="section-sub">First, I tested composition before detail. I then introduced color palettes, typography, and branding.</p>
+        </div>
+
+        <figure class="case-figure fig-lofi">
+          <div class="media-slot">
+            <img src="images-safeway/lo-fi%20wireframes.jpg" alt="Low-fidelity wireframes for Solution 1 and Solution 2" width="7699" height="7515" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <figure class="case-figure fig-hifi">
+          <div class="media-slot">
+            <img src="images-safeway/hi-fi%20wireframes.jpg" alt="High-fidelity wireframes for Solution 1 and Solution 2" width="7699" height="7515" loading="lazy" decoding="async">
+          </div>
+        </figure>
+      </section>
+
+      <section class="section wrap" id="prototypes">
+        <div class="section-head">
+          <p class="eyebrow">07 <span class="sep">/</span> Prototypes</p>
+          <h2 class="section-title">Prototyping in Figma</h2>
+          <p class="section-sub">Using components and interaction flows, I brought each solution to life.</p>
+        </div>
+
+        <figure class="case-figure fig-prototypes">
+          <div class="media-slot">
+            <img src="images-safeway/prototyping.jpg" alt="Figma prototype flows for Solution 1 and Solution 2" width="7699" height="12444" loading="lazy" decoding="async">
+          </div>
+        </figure>
+      </section>
+
+      <section class="section wrap" id="user-testing">
+        <div class="section-head">
+          <p class="eyebrow">08 <span class="sep">/</span> User Testing</p>
+          <h2 class="section-title">An outside perspective</h2>
+          <p class="section-sub">I asked a colleague to perform specific tasks using both solution prototypes.</p>
+        </div>
+
+        <div class="testing-grid">
+          <article class="testing-card">
+            <h3 class="testing-title">Solution 1</h3>
+
+            <div class="testing-block">
+              <p class="testing-label">Task</p>
+              <p class="testing-text">Add one gold potato, one sweet potato and two yams, then add one more gold potato.</p>
+            </div>
+
+            <div class="testing-block">
+              <p class="testing-label">Result</p>
+              <p class="testing-text">The participant could not complete the second task without prompting. She tapped the "add item" button, which I hadn’t prototyped, instead of the kebab menu.</p>
+            </div>
+
+            <div class="testing-block">
+              <p class="testing-label">What it meant</p>
+              <p class="testing-text">I needed to either put more emphasis on the menu, prototype the "add item button", or scrap the system as it was already too complicated.</p>
+            </div>
+          </article>
+
+          <article class="testing-card">
+            <h3 class="testing-title">Solution 2</h3>
+
+            <div class="testing-block">
+              <p class="testing-label">Task</p>
+              <p class="testing-text">Add three items, then delete one.</p>
+            </div>
+
+            <div class="testing-block">
+              <p class="testing-label">Result</p>
+              <p class="testing-text">She figured out the swipe-to-delete gesture right away and completed the task seamlessly, without any prompting.</p>
+            </div>
+
+            <div class="testing-block">
+              <p class="testing-label">What it meant</p>
+              <p class="testing-text">The task flow was completed more efficiently and successfully, which made Solution 2 the clearer direction to take forward.</p>
+            </div>
+          </article>
+        </div>
+
+        <blockquote class="testimonial">
+          <p class="testimonial-quote">“I didn’t have to think about where to go next.”</p>
+          <p class="testimonial-credit">Sophie <span class="sep">/</span> Solution 2</p>
+        </blockquote>
+
+        <p class="prose">I moved forward with Solution 2. </p>
+      </section>
+
+      <section class="section wrap" id="final">
+        <div class="section-head">
+          <p class="eyebrow">09 <span class="sep">/</span> Final Solution</p>
+          <h2 class="section-title">Streamlined userflow</h2>
+          <p class="section-sub">The final design further simplifies solution 2.</p>
+        </div>
+
+        <figure class="case-figure fig-final">
+          <div class="media-slot">
+            <img src="images-safeway/final flow.jpg" alt="Final Safeway flow: My Lists, list before, search, and list after" width="7699" height="3820" loading="lazy" decoding="async">
+          </div>
+        </figure>
+
+        <div class="final-details">
+          <div class="final-copy">
+            <p class="prose">Items can be typed in, selected, adjusted, and swiped away without leaving the list. Check-bubbles returned as a distinct completed state, while bulk actions moved into a single menu.</p>
+          </div>
+          <ul class="final-list">
+            <li><span class="final-key">Two pages</span><span class="final-val">My Lists and List only</span></li>
+            <li><span class="final-key">Type, tap, swipe</span><span class="final-val">Native mobile interactions</span></li>
+            <li><span class="final-key">Check-bubbles</span><span class="final-val">Completed items stay visible</span></li>
+            <li><span class="final-key">Hamburger menu</span><span class="final-val">Send to cart or clear the list</span></li>
+            <li><span class="final-key">Thumb-first</span><span class="final-val">Primary controls in the lower half</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section wrap" id="conclusion">
+        <div class="section-head">
+          <p class="eyebrow">10 <span class="sep">/</span> Rationale</p>
+          <h2 class="section-title">My key takeaway</h2>
+        </div>
+
+        <p class="prose">After user testing, the participant told me that changing the number of items is not super important for a grocery list, which I agree with. </p>
+        <p class="prose">Overall, the exercise showed me that for this kind of app, the simpler the better. Solution two was proven to be more intuitive, highlighting the strength of less pages, less ui elements, and less prototype interactions.</p>
+        <p class="prose">For a grocery list app, users only need to jot down names of items for future reference. I designed an app that allows them to do so without distraction.</p>
+
+        <a class="back-link" href="../design/design.html"><span aria-hidden="true">&larr;</span> Back to archive</a>
+      </section>
+    </main>
+
+    <div class="footer">
+      <p class="credits">&#169 2026 Ren Lewis</p>
+      <a href="mailto:lewisosamu@gmail.com" target="_blank" class="gmail" rel="noopener noreferrer">lewisosamu@gmail.com</a>
+    </div>
+    <script src="safeway.js"></script>
+  </body>
+</html>

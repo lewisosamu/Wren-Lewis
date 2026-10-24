@@ -1,0 +1,50 @@
+/* Shared breadcrumb styles for all portfolio pages. */
+
+.breadcrumb {
+  --crumb-fg: rgba(182, 236, 255, 0.6);
+  --crumb-hover: rgb(182, 236, 255);
+  --crumb-current: rgb(255, 255, 255);
+  --crumb-sep: rgba(182, 236, 255, 0.3);
+  display: block;
+}
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: .65rem;
+  font-weight: 300;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.breadcrumb-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--crumb-fg);
+}
+
+.breadcrumb-list li + li::before {
+  content: "/";
+  color: var(--crumb-sep);
+}
+
+.breadcrumb-list a {
+  color: var(--crumb-fg);
+  text-decoration: none;
+  transition: color .3s;
+}
+
+.breadcrumb-list a:hover {
+  color: var(--crumb-hover);
+}
+
+.breadcrumb-list [aria-current="page"] {
+  color: var(--crumb-current);
+}

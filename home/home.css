@@ -1,0 +1,358 @@
+html {
+  overscroll-behavior: none;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+.navigation {
+  top: 0;
+  z-index: 4;
+  display: flex;
+  position:fixed;
+  width: calc(100% - 100px);
+  height: 65px;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 50px;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo {
+  opacity: 75%;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
+  transition: .5s;
+}
+.logo:hover {
+  opacity: 1;
+}
+.nav-right {
+  display: flex;
+  gap: 30px;
+}
+.nav-item {
+  width: fit-content;
+  display: inline-block;
+  text-decoration: none;
+  color:rgba(69, 205, 255, 0.4);
+  font-family: JetBrains mono;
+  font-weight: 300;
+  transition: .5s;
+  text-align: center;
+}
+.nav-item:hover {
+  opacity: 1;
+  color:rgb(182, 236, 255);
+}
+.nav-item:nth-child(1) {
+  color:rgb(182, 236, 255);
+}
+.logotype {
+  font-family: "chivo";
+  color:rgba(69, 205, 255, 0.4);
+  font-size: 16px;
+  font-weight: 300;
+  text-decoration: none;
+  transition: .5s;
+}
+.logotype:hover {
+  opacity: 1;
+  color:rgb(182, 236, 255);
+}
+
+.background {
+  object-fit: cover;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 0;
+}
+
+#typewriter {
+  margin: 15px 0 30px 0;
+  align-items: center;
+  grid-column: 1;
+  font-size: 1.5rem;
+  color: white;
+  font-family: "jetbrains mono";
+  font-weight: 300;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#typewriter::after {
+  content: '|';
+  opacity: .5;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: .5; }
+  50% { opacity: 0; }
+}
+
+.title {
+  z-index: 3;
+  margin: 100px 50px 0px 50px;
+  position: relative;
+  display: grid;
+  width: calc(100% - 145px);
+  column-gap: 45px;
+  grid-template-columns: 50% 50%;
+  cursor: default;
+}
+.heading {
+  border: solid 2px rgb(0, 213, 255,.05);
+  height: fit-content;
+  position: relative;
+  border-radius: 20px;
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  padding: 50px;
+  align-items: center;
+}
+.description {
+  margin: 15px 0 30px 0;
+  align-items: center;
+  grid-column: 1;
+  font-size: 1.5rem;
+  color: white;
+  font-family: chivo;
+  font-weight: 200;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.accent {
+  font-style: italic;
+}
+.subtext {
+  margin: 0;
+  font-weight: 200;
+  font-family: chivo;
+  font-size: 1rem;
+  color: rgb(182, 236, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.mono {
+  margin: 0;
+  font-weight: 200;
+  font-family: JetBrains mono;
+  text-transform: uppercase;
+  font-size: .75rem;
+  color: rgb(182, 236, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  height: fit-content;
+}
+.scroll-link {
+  text-decoration: none;
+  transition: .5s;
+  overflow: visible;
+}
+.scroll-link:hover {
+  color:rgba(69, 205, 255, 0.4);
+}
+.scroll-link .arrow {
+  display: inline-block;
+  transition: transform .5s ease;
+}
+.scroll-link:hover .arrow {
+  transform: translateY(5px);
+}
+.connect-link {
+  display: inline-block;
+  font-family: "JetBrains Mono", monospace;
+  font-size: .75rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(182, 236, 255);
+    transition: .5s;
+}
+.connect-link:hover {  
+  color:rgba(69, 205, 255, 0.4);
+}
+.name {
+  margin: 50px 0px 0px 50px;
+  grid-column: span 2;
+  color: rgb(0, 213, 255);
+  position: relative;
+  opacity: 20%;
+  font-family: chivo;
+  font-weight: 300;
+  font-size: 20.35vw;
+  letter-spacing: -10px;
+  text-shadow: 0 0 20px rgb(0, 213, 255);
+  cursor: default;
+  z-index: 3;
+}
+
+.gradient {
+  display: block;
+  position: relative;
+  background: linear-gradient(to bottom, transparent,rgb(11, 21, 40,.75), rgb(0, 0, 0));
+  width: 100%;
+  margin-top: -100px;
+  height: 200px;
+  z-index: 2;
+}
+
+.work-grid {
+  background-color: black;
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+  display: grid;
+}
+.projects {
+  margin: 0 0 20px 50px;
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  font-family: JetBrains mono;
+  text-transform: uppercase;
+  font-weight: 300;
+  z-index: 3;
+}
+.bubbles {
+  padding: 0 50px 0 50px;
+  grid-row: 2;
+  position: relative;
+  height: fit-content;
+  z-index: 2;
+  display: grid;
+  column-gap: 2px;
+  row-gap: 2px;
+  grid-template-columns: 1fr 1fr;
+  background-color: rgb(0, 0, 0);
+}
+.all-projects {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-family: "jetbrains mono";
+  font-weight: 200;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 25px 0;
+  border-top: solid 1px rgba(69, 205, 255, 0.2);
+  background-color: black;
+  position: relative;
+  margin-bottom: 25px;
+}
+.all-projects::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to left, black, rgba(69, 205, 255, 0.2), black);
+  opacity: 0;
+  transition: opacity .5s;
+}
+.all-projects a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+.all-projects:hover::before {
+  opacity: 1;
+}
+.all-projects .arrow {
+  display: inline-block;
+  transition: transform .5s ease;
+}
+.all-projects:hover .arrow {
+  transform: translateX(5px);
+}
+a.box1 {
+  text-decoration: none;
+}
+.work-img {
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 20px;
+  transition: .5s;
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(100);
+}
+.work-img:hover  {
+  border-radius: 100px;
+  filter: grayscale(0);
+}
+.work-title {
+  color: white;
+  font-family: "JetBrains mono";
+  font-weight: 200;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin: 15px 0px 30px 0px;
+}
+.arrow {
+  display: inline-block;
+  font-family: "google sans code";
+  transition: transform .5s ease;
+}
+
+.container {
+  background-color: rgb(0, 0, 0);
+  position: relative;
+  z-index: 3;
+}
+.footer {
+  height: 50px;
+  margin: 0px 50px 0px 50px;
+  padding-top: 20px;
+  background-color: rgb(0, 0, 0);
+  z-index: 3;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.credits, .gmail {
+  font-family: chivo;
+  color:rgba(69, 205, 255, 0.4);
+  font-weight: 300;
+  margin-top: 0;
+  display: inline-block;
+  text-decoration: none;
+  transition: .5s;
+}
+.gmail:hover {
+  color: rgb(182, 236, 255);
+}
+
+@media (max-width: 760px) {
+  .navigation {
+    width: calc(100% - 40px);
+    padding-left: 10px;
+    padding-right: 20px;
+  }
+  .nav-right {
+    gap: 16px;
+  }
+}
